@@ -17,13 +17,14 @@ public class UserRealm extends AuthorizingRealm {
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection arg0) {
-        System.out.println("权限配置-->MyShiroRealm.doGetAuthorizationInfo()");
+    	System.out.println("-------加载权限-->MyShiroRealm.doGetAuthorizationInfo()");
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         return authorizationInfo;
     }
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken arg0) throws AuthenticationException {
+    	System.out.println("---------认证");
         return null;
     }
 }

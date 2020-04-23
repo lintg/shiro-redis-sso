@@ -12,6 +12,8 @@ public class UserController {
     @RequestMapping("/get")
     public User get(){
         User user = (User) SecurityUtils.getSubject().getPrincipal();
+        String str = (String)SecurityUtils.getSubject().getSession().getAttribute("test");
+        System.out.println("--------------------"+str);
         return user;
     }
 
